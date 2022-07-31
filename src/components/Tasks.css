@@ -1,0 +1,82 @@
+main {
+  margin-bottom: 1rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.header h3 {
+  margin: 1rem 0.5rem;
+}
+
+.header a {
+  text-decoration: none;
+  background-color: orangered;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 1rem;
+  transition: 300ms ease;
+}
+
+.header a:hover {
+  background-color: orange;
+}
+
+.task_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 250px;
+  gap: 1.5rem 1rem;
+}
+
+.task_card {
+  padding: 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 350px;
+}
+
+#task_title,
+#task_description,
+#task_status {
+  /* margin-bottom: 0.5rem; */
+  text-transform: capitalize;
+}
+
+#task_description {
+  color: rgb(36, 36, 36);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  margin-top: 0.5rem;
+}
+
+#task_status {
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+.actions button {
+  border: none;
+  outline: none;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.actions button a {
+  text-decoration: none;
+  color: blue;
+}
+
+.actions button:hover {
+  transform: scale(1.1);
+}

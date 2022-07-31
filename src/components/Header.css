@@ -1,0 +1,50 @@
+header {
+  padding: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+header form {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header .form_group {
+  background-color: white;
+}
+
+header input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  padding: 1rem 1.3rem;
+}
+
+header button {
+  padding: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: orangered;
+  transition: 300ms ease;
+}
+
+header button:hover {
+  background-color: orange;
+}
+
+header button i {
+  color: #fff;
+}
+
+@media screen and (max-width: 520px) {
+  h2 {
+    flex-basis: 100%;
+  }
+
+  form {
+    margin: 1rem 0 0.5rem;
+  }
+}
