@@ -31,7 +31,7 @@ const handler = (state, action) => {
 
 function Context({ children }) {
   const [tasks, dispatch] = useReducer(handler, []);
-  const [searchList, setSeachList] = useState([]);
+  const [searchList, setSearchList] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [tobeDeleted, setTobeDeleted] = useState("");
 
@@ -39,7 +39,7 @@ function Context({ children }) {
     const searchs = tasks.filter((task) =>
       task.title.toLowerCase().includes(searchText.toLowerCase())
     );
-    setSeachList(searchs);
+    setSearchList(searchs);
   };
   return (
     <TaskList.Provider
@@ -52,6 +52,7 @@ function Context({ children }) {
         setShowModal,
         tobeDeleted,
         setTobeDeleted,
+        setSearchList,
       }}
     >
       {children}
