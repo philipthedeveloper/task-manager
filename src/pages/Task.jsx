@@ -7,7 +7,7 @@ import { useParams, useNavigate } from "react-router-dom";
 function Task() {
   const { taskID } = useParams();
   const navigate = useNavigate();
-  const { tasks, dispatch } = useContext(TaskList);
+  const { tasks, dispatch, setSearchList } = useContext(TaskList);
   const [currentTask, setCurr] = useState(undefined);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -42,6 +42,7 @@ function Task() {
   };
 
   useEffect(() => {
+    setSearchList([]);
     let currentTask;
     if (taskID) {
       currentTask = tasks.find((task) => task.id === Number(taskID));
@@ -50,7 +51,7 @@ function Task() {
       setDesc(currentTask.desc);
       setStatus(currentTask.status);
     }
-  }, [taskID, tasks]);
+  }, [taskID, tasks, setSearchList]);
 
   return (
     <div className="task_page">
