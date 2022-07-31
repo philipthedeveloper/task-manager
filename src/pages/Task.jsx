@@ -50,7 +50,7 @@ function Task() {
       setDesc(currentTask.desc);
       setStatus(currentTask.status);
     }
-  }, [taskID]);
+  }, [taskID, tasks]);
 
   return (
     <div className="task_page">
