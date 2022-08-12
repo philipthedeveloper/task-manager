@@ -14,6 +14,9 @@ function Task() {
   const [status, setStatus] = useState("todo");
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (title.trim().length < 2 || desc.trim().length < 2) {
+      return alert("Please Enter A Title and A Description...");
+    }
     const id = Math.floor(Math.random() * 100000);
     const newTask = {
       id,
@@ -27,6 +30,9 @@ function Task() {
 
   const handleUpdate = (e) => {
     e.preventDefault();
+    if (title.trim().length < 2 || desc.trim().length < 2) {
+      return alert("Please Enter A Title and A Description...");
+    }
     const updateTask = {
       id: currentTask.id,
       title: title.trim(),
